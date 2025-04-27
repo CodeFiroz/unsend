@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #FDFDFD;
+  color: #0C0C0C;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.postSection{
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 20px;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+.message-wrapper{
+  width: 70%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 40px;
+  background: #fff3e6;
+}
+
+.message-wrapper h1{
+  margin-bottom: 30px;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 500;
+}
+
+.backBtn{
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  position: absolute;
+  top: 130px;
+  left: 100px;
+  cursor: pointer;
+}
+
+.write-message{
+  text-align: center;
+  padding: 100px 0px;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.write-message h1{
+  text-transform: uppercase;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 500;
+}
+
+.write-message form{
+  margin-top: 40px;
+}
+
+.write-message form input, textarea{
+  width: 100%;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  outline: 0;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.write-message form textarea{
+  height: 200px;
+}
+.write-message button {
+  padding: 10px 30px;
+  border: 2px solid #000;
+  background: #FFA81D;
+  color: #000;
+  box-shadow: 5px 5px 0px #000;
+  font-weight: 800;
+  font-size: 20px;
+}

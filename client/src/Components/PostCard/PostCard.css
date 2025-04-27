@@ -1,0 +1,45 @@
+.postCard{
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 20px;
+    transition: .3s ease-in-out;
+}
+
+.postCard:hover{
+    transform: scale(0.98);
+    background: #2c2c2c;
+    color: #fff;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.06);
+}
+
+.postCard:hover h2 span{
+    color: #d0d0d0;
+}
+
+.postCard:hover .date{
+    color: #fff;
+}
+
+.postCard h2,
+.postCard h2 span{
+    font-size: 30px;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.postCard h2 span{
+    color: #444;
+}
+
+.postCard .date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+}

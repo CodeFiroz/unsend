@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Environment Variables
+.env
+.env.*  # Covers .env.local, .env.production, .env.development etc.
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+
+# Next.js / React
+.next/
+out/
+.cache/
+coverage/
+
+# Misc
+*.pem

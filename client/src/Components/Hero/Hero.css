@@ -1,0 +1,17 @@
+.hero{
+    width: 100%;
+    padding: 40px;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.hero h1{
+    font-size: 50px;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 1px 0px #FFA81D;
+    margin-bottom: 10px;
+}
