@@ -2,6 +2,7 @@ import Hero from "../Components/Hero/Hero";
 import PostCard from "../Components/PostCard/PostCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "../Components/Loading/Loading";
 
 const Home = () => {
   const [messages, setMessages] = useState([]);
@@ -10,8 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchMsg = async () => {
       try {
-        const messagesRes = await axios.get("http://localhost:3000/api/msg");
-        console.log(messagesRes.data.data);
+        const messagesRes = await axios.get(import.meta.env.VITE_API_ENDPOINT);
         
         setMessages(messagesRes.data.data);
       } catch (error) {
@@ -26,9 +26,9 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div className="loading">
-        <h5>Loading...</h5>
-      </div>
+      <>
+      <Loading />
+      </>
     );
   }
 

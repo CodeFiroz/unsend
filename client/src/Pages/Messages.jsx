@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
 import { useParams } from "react-router-dom"
-
+import Loading from "../Components/Loading/Loading";
 
 const Messages = () => {
 
@@ -17,8 +17,7 @@ const Messages = () => {
   useEffect(() => {
     const fetchMsg = async () => {
       try {
-        const messagesRes = await axios.get(`http://localhost:3000/api/msg/${msg}`);
-        console.log(messagesRes.data.Note);
+        const messagesRes = await axios.get(import.meta.env.VITE_API_ENDPOINT + msg);
         
         setMessage(messagesRes.data.Note);
       } catch (error) {
@@ -33,9 +32,9 @@ const Messages = () => {
 
   if (loading) {
     return (
-      <div className="loading">
-        <h5>Loading...</h5>
-      </div>
+      <>
+      <Loading />
+      </>
     );
   }
 
@@ -50,12 +49,16 @@ const Messages = () => {
       <div className="message-wrapper">
 
         <h1>
-          {message[0].to}
+          Dear - {message[0].to}
         </h1>
 
-       <p>
+       <pre>
        {message[0].message}
-       </p>
+       </pre>
+
+      <h4>
+        ~ <span>From</span> {message[0].from}
+      </h4>
 
       </div>
     </>

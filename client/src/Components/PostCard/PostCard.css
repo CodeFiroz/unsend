@@ -1,7 +1,8 @@
 .postCard{
     width: 100%;
     padding: 30px;
-    background: #fff;
+    background: var(--card-bg);
+    backdrop-filter: blur(2px);
     border: 1px solid #e2e2e2;
     border-radius: 20px;
     display: block;
@@ -12,16 +13,20 @@
 .postCard:hover{
     transform: scale(0.98);
     background: #2c2c2c;
-    color: #fff;
+    color: var(--bg);
     box-shadow: 10px 10px 10px rgba(0,0,0,0.06);
 }
 
+.postCard:hover h2{
+    color: #FFA81D;
+}
+
 .postCard:hover h2 span{
-    color: #d0d0d0;
+    color: #FFA81D;
 }
 
 .postCard:hover .date{
-    color: #fff;
+    color: #FFA81D;
 }
 
 .postCard h2,
@@ -30,10 +35,11 @@
     font-family: "Cal Sans", sans-serif;
     font-weight: 500;
     margin-bottom: 10px;
+    color: var(--text);
 }
 
 .postCard h2 span{
-    color: #444;
+    color: var(--text);
 }
 
 .postCard .date{
@@ -41,5 +47,5 @@
     align-items: center;
     gap: 10px;
     font-size: 13px;
-    color: #555;
+    color: var(--text);
 }

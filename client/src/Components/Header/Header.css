@@ -3,13 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: var(--bg);
     border-bottom: 3px solid #000;
     padding: 10px 50px;
 }
 
 .site-logo h4 a{
-    color: #000;
+    color: var(--text);
     font-size: 28px;
     font-family: "Cal Sans", sans-serif;
     font-weight: 500;
@@ -32,13 +32,14 @@
     border-radius: 40px;
     position: relative;
     height: 40px;
-    background: #313131;
+    background: var(--text);
 }
 
 .theme .indicator{
     width: 30px;
     height: 30px;
-    background: #fff;
+    background: var(--bg);
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,4 +93,36 @@
     background: #1c0851;
     color: #fff;
     font-size: 22px;
+}
+
+
+@media (max-width: 768px) {
+ .header{
+    padding: 10px;
+ } 
+
+ .postBtn{
+    font-size: 12px;
+ }
+
+ .theme{
+    width: 40px;
+ }
+
+ 
+
+ .theme .indicator,
+ .theme.active .indicator{
+    width: 35px;
+    height: 35px;
+    right: 50%;
+    transform: translate(50%, -50%);
+ }
+
+ .infoBtn{
+    width: 35px;
+    height: 35px;
+ }
+
+
 }
