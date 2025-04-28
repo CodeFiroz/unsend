@@ -47,7 +47,7 @@ const Write = () => {
     setButtonState("Submitting...", true);
 
     try {
-      const formResponse = await axios.post("http://localhost:3000/api/msg", formdata);
+      const formResponse = await axios.post(import.meta.env.VITE_API_ENDPOINT, formdata);
 
       if (formResponse.data.success) {
         toast.success("Message Submitted");
