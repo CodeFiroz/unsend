@@ -3,23 +3,19 @@ import Home from "./Pages/Home"
 import Messages from "./Pages/Messages"
 import Write from "./Pages/Write"
 
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
       <Header />
-
-       <Routes>
-       <Route path="/" element={<Home />}></Route>
-        <Route path="/write-message" element={<Write />}></Route>
-        <Route path="/:msg" element={<Messages />}></Route>
-       </Routes>
-      
-      </BrowserRouter>
-
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/write-message" element={<Write />} />
+        {/* Dynamic Route */}
+        <Route path="/:msg" element={<Messages />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
